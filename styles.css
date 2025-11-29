@@ -1,0 +1,149 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fa;
+  color: #333;
+  font-size: 15px;
+}
+
+header {
+  background-color: #0077cc;
+  color: white;
+  padding: 12px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Search Section */
+.search-section {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.search-section input {
+  padding: 8px;
+  width: 220px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-section button {
+  padding: 8px 12px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-section button:hover {
+  background-color: #005fa3;
+}
+
+/* Suggested Destinations */
+.suggested-section {
+  margin-bottom: 20px;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  padding: 10px;
+}
+
+/* Card Styling */
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+}
+
+/* Updated image styling */
+.destination-image {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+  margin: 0;
+}
+
+.card button {
+  margin-top: 8px;
+  padding: 6px 10px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #005fa3;
+}
+
+/* Filters Card */
+.filters-card {
+  background-color: #e9eff5;
+  text-align: left;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filters-card h3 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.filters-card label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.filters-card input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+/* Footer */
+footer {
+  background-color: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}

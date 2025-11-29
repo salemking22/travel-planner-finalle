@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Favorites</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>My Favorite Destinations</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="itinerary.html">Itinerary</a>
+      <a href="favorites.html">Favorites</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <p>These are the destinations you've marked as favorites. You can remove them or explore more.</p>
+    </section>
+
+    <h2 class="section-title">Saved Favorites</h2>
+    <section class="destination-grid" id="favorites-list">
+      <!-- Cards will be injected here by JavaScript -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Travel Planner. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Load favorites from localStorage
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    const list = document.getElementById("favorites-list");
+
+    if (favorites.length === 0) {
+      list.innerHTML = "<p>No favorites saved yet.</p>";
+    } else {
+      favorites.forEach(destination => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <h3>${destination}</h3>
+          <p>This destination is in your favorites.</p>
+          <button onclick="removeFavorite('${destination}')">Remove</button>
+        `;
+        list.appendChild(card);
+      });
+    }
+
+    // Remove favorite
+    function removeFavorite(name) {
+      let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+      favorites = favorites.filter(item => item !== name);
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+      location.reload(); // Refresh to update the list
+    }
+  </script>
+</body>
+</html>

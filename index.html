@@ -4,9 +4,108 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Travel Planner</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Welcome to Travel Planner</h1>
-  <p>This is my final project setup for Week 5.</p>
+  <header>
+    <h1>Travel Planner</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="itinerary.html">Itinerary</a>
+      <a href="favorites.html">Favorites</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <input type="text" id="searchInput" placeholder="Search destination..." />
+      <button onclick="searchDestination()">SEARCH</button>
+      <p id="searchMessage"></p>
+    </section>
+
+    <h2 class="section-title">Suggested Destinations</h2>
+
+    <section class="destination-grid">
+      <!-- Destination Card: Victoria Falls -->
+      <div class="card" data-tags="scenic adventure">
+        <img src="images/victoria-falls.jpg" alt="Victoria Falls" class="destination-image" />
+        <h3>Victoria Falls</h3>
+        <ul>
+          <li>Waterfall views</li>
+          <li>Helicopter tours</li>
+          <li>White-water rafting</li>
+        </ul>
+        <button onclick="addToItinerary('Victoria Falls')">ADD TO IT</button>
+        <button onclick="saveToFavorites('Victoria Falls')">❤️ Save to Favorites</button>
+      </div>
+
+      <!-- Destination Card: Nyanga -->
+      <div class="card" data-tags="scenic wildlife">
+        <img src="images/nyanga.jpg" alt="Nyanga National Park" class="destination-image" />
+        <h3>Nyanga National Park</h3>
+        <ul>
+          <li>Scenic hiking trails</li>
+          <li>Cool mountain climate</li>
+          <li>Wildlife viewing</li>
+        </ul>
+        <button onclick="addToItinerary('Nyanga National Park')">ADD TO IT</button>
+        <button onclick="saveToFavorites('Nyanga National Park')">❤️ Save to Favorites</button>
+      </div>
+
+      <!-- Destination Card: Great Zimbabwe -->
+      <div class="card" data-tags="historic cultural">
+        <img src="images/great-zimbabwe.jpg" alt="Great Zimbabwe Ruins" class="destination-image" />
+        <h3>Great Zimbabwe Ruins</h3>
+        <ul>
+          <li>Ancient stone architecture</li>
+          <li>Guided cultural tours</li>
+          <li>UNESCO World Heritage Site</li>
+        </ul>
+        <button onclick="addToItinerary('Great Zimbabwe Ruins')">ADD TO IT</button>
+        <button onclick="saveToFavorites('Great Zimbabwe Ruins')">❤️ Save to Favorites</button>
+      </div>
+
+      <!-- Destination Card: Lake Kariba -->
+      <div class="card" data-tags="scenic adventure">
+        <img src="images/lake-kariba.jpg" alt="Lake Kariba" class="destination-image" />
+        <h3>Lake Kariba</h3>
+        <ul>
+          <li>Houseboat cruises</li>
+          <li>Fishing trips</li>
+          <li>Sunset views</li>
+        </ul>
+        <button onclick="addToItinerary('Lake Kariba')">ADD TO IT</button>
+        <button onclick="saveToFavorites('Lake Kariba')">❤️ Save to Favorites</button>
+      </div>
+
+      <!-- Destination Card: Matobo Hills -->
+      <div class="card" data-tags="scenic cultural">
+        <img src="images/matobo-hills.jpg" alt="Matobo Hills" class="destination-image" />
+        <h3>Matobo Hills</h3>
+        <ul>
+          <li>Granite formations</li>
+          <li>Rock art sites</li>
+          <li>Spiritual heritage</li>
+        </ul>
+        <button onclick="addToItinerary('Matobo Hills')">ADD TO IT</button>
+        <button onclick="saveToFavorites('Matobo Hills')">❤️ Save to Favorites</button>
+      </div>
+
+      <!-- Filters Card -->
+      <div class="card filters-card">
+        <h3>Filter by:</h3>
+        <label><input type="checkbox" name="scenic" /> Scenic</label>
+        <label><input type="checkbox" name="cultural" /> Cultural</label>
+        <label><input type="checkbox" name="wildlife" /> Wildlife</label>
+        <label><input type="checkbox" name="adventure" /> Adventure</label>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Travel Planner. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
